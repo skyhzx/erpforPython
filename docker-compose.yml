@@ -15,8 +15,16 @@ services:
     networks:
       - db_network
   web:
+    # ====== 前端构建配置 ======
+    # 模式1：从本地 frontend 目录构建（默认）
     build:
       context: ./frontend/
+
+    # 模式2：使用独立的前端镜像（前后端分离仓库）
+    # image: your-registry/erp-frontend:latest
+    # 或者使用本地构建的镜像
+    # image: erp-frontend:local
+
     volumes:
       - ./frontend:/app
     networks:

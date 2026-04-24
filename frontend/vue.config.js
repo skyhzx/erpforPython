@@ -16,13 +16,15 @@ module.exports = {
   css: {
     loaderOptions: {
       less: {
-        javascriptEnabled: true,
-        modifyVars: {
-          'primary-color': '#50799e',
-          'text-color': '#6e6e6e',
-          'border-color': '#eee',
-          'nice-blue': '#f0f'
-
+        lessOptions: {
+          javascriptEnabled: true,
+          math: 'always', // 兼容旧版 Less 数学运算
+          modifyVars: {
+            'primary-color': '#50799e',
+            'text-color': '#6e6e6e',
+            'border-color': '#eee',
+            'nice-blue': '#f0f'
+          },
         },
       },
     },

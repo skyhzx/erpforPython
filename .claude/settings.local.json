@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r frontend/* ../erp-frontend-standalone/)",
+      "Bash(cp -r frontend/.gitignore ../erp-frontend-standalone/)",
+      "Read(//f//**)",
+      "Bash(cp -r ERP-Project ERP-Project-backup-node12)",
+      "Bash(npm install *)",
+      "Bash(NODE_OPTIONS=\"--openssl-legacy-provider\" npm run build)"
+    ]
+  }
+}
